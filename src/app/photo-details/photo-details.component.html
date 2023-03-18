@@ -1,0 +1,11 @@
+<div class="float-right" style="padding-right: 30px; padding-top: 10px;">
+    <a [routerLink]="['/album', 11]" type="button" class="btn btn-outline-success">
+        Go back to Album
+    </a>
+</div><br>
+
+<p>photo-details works!</p>
+
+<ul>
+    <li *ngFor="let photo of photos">{{photo.photoUrl}}</li>
+</ul>
