@@ -17,7 +17,6 @@ export class RecentAlbumsComponent implements OnInit {
     this.albumService.getAllAlbums().subscribe(
       response => {
         this.albums = <Album[]>response;
-        console.log("Got all albums response", this.albums);
       }
     );
   }

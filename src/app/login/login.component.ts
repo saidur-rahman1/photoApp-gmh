@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
   
   signInFormVisible = true;
 
+  name!: string;
   email!: string;
   password!: string;
 
@@ -27,7 +28,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log("tried to login");
     this.userService.logInUser(this.email, this.password);
     this.email = "";
     this.password = "";
@@ -35,7 +35,8 @@ export class LoginComponent implements OnInit {
 
   signup() {
     console.log("tried to signup");
-    this.userService.signUpUser(this.email, this.password);
+    this.userService.signUpUser(this.name, this.email, this.password);
+    this.name = "";
     this.email = "";
     this.password = "";
   }

@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'albums/me', component: MyAlbumsComponent, canActivate: [UserService]},
   {path: 'profile/:profileId', component: ProfileComponent, canActivate: [UserService]},
   {path: 'create', component: CreateAlbumComponent, canActivate: [UserService]},
-  {path: 'album/:albumId', component: AlbumDetailsComponent, canActivate: [UserService]},
+  {path: 'albums/:albumId', component: AlbumDetailsComponent, canActivate: [UserService]},
   {path: 'upload/:albumId', component: UploadPictureComponent, canActivate: [UserService]},
   {path: 'photo/:photoId', component: PhotoDetailsComponent, canActivate: [UserService]}
 ];

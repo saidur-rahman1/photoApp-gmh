@@ -1,9 +1,22 @@
 <div class="float-right" style="padding-right: 30px; padding-top: 10px;">
-    <a [routerLink]="['/upload', 11]" type="button" class="btn btn-outline-success">
+    <a [routerLink]="['/upload', albumId]" type="button" class="btn btn-outline-success">
         Upload Photo
     </a>
 </div><br>
 
-Specific Album
-<br><br>
-<a [routerLink]="['/photo', 11]">Photo Details</a>
+Photos in this album
+
+<div class="row">
+    <div class="col-sm-3 pt-3" *ngFor="let photo of photos">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" [src]="photo.photoUrl" alt="Card image cap" width="150" height="150">
+            <div class="card-body">
+              <h5 class="card-title">{{photo.createdBy}}</h5>
+              <a [routerLink]="['/photo', photo.id]" class="btn btn-primary">Go to Photo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <br><br>
+<a [routerLink]="['/photo', 11]">Photo Details</a> -->

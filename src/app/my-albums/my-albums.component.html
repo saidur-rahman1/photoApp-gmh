@@ -5,4 +5,16 @@
 
 My Albums
 
-<a [routerLink]="['/album', 11]">Specific Album</a>
+<div class="row">
+    <div class="col-sm-3 pt-3" *ngFor="let album of myAlbums">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" [src]="album.coverPhotoUrl" alt="Card image cap" width="150" height="150">
+            <div class="card-body">
+              <h5 class="card-title">{{album.name}}</h5>
+              <a [routerLink]="['/albums', album.id]" class="btn btn-primary">Go to Album</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a [routerLink]="['/albums', 11]">Specific Album</a>
